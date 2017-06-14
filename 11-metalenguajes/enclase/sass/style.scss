@@ -1,0 +1,27 @@
+$color_titulo: chocolate;
+
+@mixin base ($color: blueviolet) {
+    color: $color;
+    font-size: 2rem;
+}
+
+header {
+    h1 {
+        color: $color_titulo;
+    }
+}
+
+.marron {
+    color: maroon;
+}
+
+article {
+    p {
+        @include base (green);
+    }
+
+    >p {
+       @extend .marron;
+       font-size: 1.3rem;
+    }
+}

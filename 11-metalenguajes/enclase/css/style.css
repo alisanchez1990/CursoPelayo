@@ -1,0 +1,13 @@
+header h1 {
+  color: chocolate; }
+
+.marron, article > p {
+  color: maroon; }
+
+article p {
+  color: green;
+  font-size: 2rem; }
+article > p {
+  font-size: 1.3rem; }
+
+/*# sourceMappingURL=style.css.map */
