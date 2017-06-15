@@ -46,7 +46,7 @@ aside {
 	// elemento anidado 
 	p {background-color: darkkhaki;
 	// Referencia al antecesor y pseudoclases
-	&:nth-of-type(1) {
+		&:nth-of-type(1) {
 		  color: maroon
 	   } 
 	}  

@@ -15,9 +15,9 @@
     <script>
 
         function dragging(oEvent) {
-            /*Para que funcione en firefox*/
-            oEvent.originalEvent.dataTransfer.effectAllowed = "move";
-            oEvent.originalEvent.dataTransfer.setData("text/plain", "");
+            // Para que funcione en Firefox
+            oEvent.originalEvent.dataTransfer.setdata(
+                'text/plain',"anything")
             $(oEvent.target).addClass('dragging');
             $draggedItem = $(oEvent.target);
         }
