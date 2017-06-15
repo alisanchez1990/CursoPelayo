@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3">
+	<meta name="author" content="Alejandro" >
+	<meta name="application-name" content="…">
+	<meta name="description" content="Ejercicios de HTML5">
+	<meta name="generator" content="Aptana" >
+	<meta charset="UTF-8">
+	<title>RWD en HTML5</title>
+	<link rel="stylesheet" href="default.css">
+	<link rel="shortcut icon" href="fav_icon.png">
+	<style>
+		*{ 	margin: 0px;
+			padding: 0px}
+		body {background-color: #2d7d84}	
+		header {
+			width:90%;
+			margin: 20px auto;
+			color: #CC0000;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		header p {color:#EEEEEE}
+		header h1 {
+			font-size: 3em;
+		}
+        nav#bottom {
+            display: none;
+        }
+		nav{width:90%;
+			margin: 20px auto;
+			background-color: #CC0000;
+			color:#EEEEEE;
+			border-radius: 10px;
+			}
+		nav ul {list-style: none;
+				text-align: center;}
+		nav li {display: inline-block;
+				padding: 10px 5%;}	
+		section {width:60%;
+				margin: 20px 5%;
+				float: left;
+				}		
+		article {
+                float: left;
+                width: 29%;
+                margin-left:1%;
+                border-radius: 10px;
+				padding: 5% 10%; 
+				background-color: #EBEBFF;
+				margin-bottom: 10px;}
+		h2 {
+			border-radius: 10px;
+			margin: 20px 0px;
+			background-color: #2d7d84;
+			color:#EEEEEE;
+			padding: 0px 10px;
+		}
+		article p {
+			margin: 20px 0px;
+		}
+		article p:last-child{
+			margin-bottom: 0px;
+		}
+		span.Autor {font-style: italic}
+		aside {width:20%;
+				margin: 20px 0%;
+				float: left;
+				border-radius: 10px;
+				background-color: #EBEBFF;
+		}
+		aside ul {list-style: none;}
+		aside p {
+			font-size: 12px;
+		}
+		footer {clear: both;
+			width:90%;
+			margin: 20px auto}
+
+        @media screen and (max-width:1024px) {
+            body>section, aside {
+                width: auto;
+                margin: 20px 5%;
+            }
+
+                aside > section {
+                    width: 40%;
+                }
+
+        @media screen and (max-width:700px) {
+
+           article, aside > section {
+            width: auto;
+            margin: 20px 5%;
+            }
+
+            nav#top {
+                display: none;
+            }
+
+            nav#bottom {
+                display: block;
+                clear: both;
+            }
+
+            nav li {
+                display: block;
+            }
+        }
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Microforum</h1>
+		<p>Ensañanza de las TICs</p>
+	</header>
+
+<nav id="top">
+	<ul>
+		<li>Inicio</li>
+		<li>Acerca de</li>
+		<li>Servicios</li>
+		<li>Clientes</li>
+		<li>Contactos</li>
+	</ul>
+</nav>
+
+<section>
+	<article>
+		<h2>Ejemplo 1</h2>
+		<p>Curabitur ut congue hac, diam turpis maecenas id vestibulum nulla nisl, libero leo, ut scelerisque maecenas id, ornare magna orci. In blandit sed et sagittis non, ullamcorper nec metus felis vel, vestibulum a in sit. Leo non odio fermentum lectus cubilia, mauris aliquam nunc eu neque ac sollicitudin. Tincidunt nisl morbi nulla rutrum, adipisicing tellus integer nunc massa id quis. Cursus sagittis massa ac sociis interdum, sem cursus, enim aptent sit, semper mauris, quam urna sed quis vivamus…</p>
+		<p>Esccrito por <span class="Autor">Aleajndro Cerezo</span></p> 
+	</article>
+		
+	<article>
+		<h2>Ejemplo 2</h2>
+		<p>Curabitur ut congue hac, diam turpis maecenas id vestibulum nulla nisl, libero leo, ut scelerisque maecenas id, ornare magna orci. In blandit sed et sagittis non, ullamcorper nec metus felis vel, vestibulum a in sit. Leo non odio fermentum lectus cubilia, mauris aliquam nunc eu neque ac sollicitudin. Tincidunt nisl morbi nulla rutrum, adipisicing tellus integer nunc massa id quis. Cursus sagittis massa ac sociis interdum, sem cursus, enim aptent sit, semper mauris, quam urna sed quis vivamus…</p> 
+		<p>Esccrito por <span class="Autor">Aleajndro Cerezo</span></p> 
+	</article>	
+</section>
+
+<aside>
+	<section> 
+	<h2>
+		Noticias
+	</h2>
+	<p>Curabitur ut congue hac, diam turpis maecenas id vestibulum nulla nisl, libero leo, ut scelerisque maecenas id, ornare magna orci. In blandit sed et sagittis non, ullamcorper nec metus felis vel, vestibulum a in sit. Leo non odio fermentum lectus cubilia, mauris aliquam nunc eu neque ac sollicitudin. Tincidunt nisl morbi nulla rutrum, adipisicing tellus integer nunc massa id quis. Cursus sagittis massa ac sociis interdum, sem cursus, enim aptent sit, semper mauris, quam urna sed quis vivamus…</p>
+	</section>
+	<section>
+	<h2>
+		Enlaces
+	</h2>		
+	<ul>
+		<li><a href="#">Sitio 1</a></li>
+		<li><a href="#">Sitio 2</a></li>
+		<li><a href="#">Sitio 3</a></li>
+		<li><a href="#">Sitio 4</a></li>
+		<li><a href="#">Sitio 5</a></li>
+		<li><a href="#">Sitio 6</a></li>
+	</ul>
+	</section>
+</aside>
+
+    <nav id="bottom">
+        <ul>
+            <li>Inicio</li>
+            <li>Acerca de</li>
+            <li>Servicios</li>
+            <li>Clientes</li>
+            <li>Contactos</li>
+        </ul>
+    </nav>
+
+
+<footer>
+	<p>Copyright © Microforum</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3">
+	<meta name="author" content="Alejandro" >
+	<meta name="application-name" content="…">
+	<meta name="description" content="Ejercicios de HTML5">
+	<meta name="generator" content="Bluefish 2.2.4" >
+	<meta charset="UTF-8">
+	<title>Columnas</title>
+	<link rel="stylesheet" href="default.css">
+	<link rel="shortcut icon" href="fav_icon.png">
+	<style>
+		body {
+			margin: 1em 2em;			
+		}
+		header {background-color: maroon;
+				color: white;
+				padding: 0.1px;
+				margin: 1em 0em;
+		}
+        article {
+            -moz-column-count: 3;
+            -webkit-column-count: 3;
+            column-count: 3;
+            -moz-column-gap: 20px;
+            -webkit-column-gap: 20px;
+            column-gap: 20px;
+        }
+        p:first-child {margin-top:0}
+	</style>
+</head>
+
+<body>
+<header>
+	<h1>Origen de las hojas de estilo</h1>	
+</header>
+<article>
+	<p>El CSS es un lenguaje de estilos empleado para definir la presentación, el formato y la apariencia de un documento de marcaje, sea html, xml, o cualquier otro. Comúnmente se emplea para dar formato visual a documentos html o xhtml que funcionan como espacios web. También puede ser empleado en formatos xml, u otros tipos de documentos de marcaje para la posterior generación de documentos.</p>
+	<p>Las hojas de estilos nacen de la necesidad de diseñar la información de tal manera que podemos separar el contenido de la presentación y, así, por una misma fuente de información, generalmente definida mediante un lenguaje de marcaje, ofrecer diferentes presentaciones en función de dispositivos, servicios, contextos o aplicativos. Por lo que un mismo documento html, mediante diferentes hojas de estilo, puede ser presentado por pantalla, por impresora, por lectores de voz o por tabletas braille. Separamos el contenido de la forma, composición, colores y fuentes.</p>		
+	<p>	La especificación del CSS la mantiene el World Wide Web Consortium (<a href="http://www.w3c.org">W3C</a>).</p>
+	<p>Las diferentes revisiones de las hojas de estilo tienen el origen en la primera especificaciónpublicada por el W3C en diciembre de 1996 y que pretendía unificar la sintaxis y el modo de definir una hoja de estilos por los diferentes lenguajes derivados del SGML. </p>
+	<p>A partir de esta primera especificación, en mayo de 1998, y como una extensión a la primera revisión, aparece la segunda, popularmente conocida como la especificación CSS2, y adoptada por la mayoría de los navegadores. Como características fundamentales que añade la revisión, se encuentra la posibilidad de definir posiciones de forma absoluta, relativa y fija, así como la profundidad de los elementos (z-index) cuando existen superposiciones, también el soporte para formatos de voz y textos bidireccionales. De esta, aparece una revisión, la 2.1, que incorpora muchas de las mejoras hechas por los fabricantes de navegadores y que actualmente es empleada y estandarizada.</p>	
+	<p>La tercera revisión de la especificación del CSS por el W3C empieza en el 2005 y todavía está en proceso de definición. Pero esta vez, las diferentes implementaciones de los motores de renderde los navegadores no están esperando a tener una especificación, sino que implementan ciertas cosas a su manera y, por lo tanto, muchas son utilizables en entornos de producción web. Es necesario, sin embargo, partir siempre de la consideración de que las diferentes implementaciones de los navegadores no es exacta, y de que, por lo tanto, cuando diseñamos una hoja de estilos, el principio que tiene que regir es que funcione en todas partes, y no que funcione igual.</p>
+</article>
+</body>
+</html>

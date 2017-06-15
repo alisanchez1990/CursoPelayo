@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3">
+	<meta name="author" content="Alejandro" >
+	<meta name="application-name" content="…">
+	<meta name="description" content="Ejercicios de HTML5">
+	<meta name="generator" content="Bluefish 2.2.4" >
+	<meta charset="UTF-8">
+	<title>Historia de Internet</title>
+	<link rel="stylesheet" href="default.css">
+	<link rel="shortcut icon" href="fav_icon.png">
+	<style>
+		body {
+			margin: auto;
+			width: 95%;
+		}
+		section {
+			float: left;
+			width: 70%;
+			margin: auto 2%
+		}
+				
+		aside {
+			float: left;
+			width: 20%;
+			/*min-width:  180px;  950 / 20 = 190 */
+			margin: auto 2%
+		}
+
+		figure {
+			float: right;
+			width: 50%;
+		}
+		img {
+			max-width: 100%;
+		}
+		time{
+			color: red;
+		}
+		span.person {
+			font-weight: bold;
+			font-style: italic;
+			color: brown;
+		}
+		span.oculto {
+			display:none;
+		}
+		@media (min-width:1000px) {
+			article {
+				-moz-column-count: 2;
+				-webkit-column-count: 2;
+				-moz-column-width: 48%; 
+				-webkit-column-width: 48%; 
+				-moz-column-gap: 4%; 
+				-webkit-column-gap: 4%;
+			}	
+		}	
+
+		@media (max-width:800px) {
+			section, aside {
+				width: auto;
+			}
+		}
+		@media (max-width:500px) {
+			figure {
+				float: left;
+				width: 90%;
+			}
+		} 
+		
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Apuntes para la historia de Internet</h1>
+	</header>
+	<section id="principal">
+		<article>
+			<header>
+				<h2>DARPA en los años 60</h2>	
+			</header>
+			<figure>
+				<img src="images/Licklider.jpg"/>
+				<figcaption>J.C.R. Licklider, autor del concepto de Galactic Network en los años 50, y director de una de las oficinas técnicas de DARPA</figcaption>
+			</figure>
+			<p>Con la creación del primer módem en 1958, la compañía BELL inaugura la transmisión de datos binarios sobre una línea telefónica simple, permitiendo que una  computadora central o unidad principal, pueda conectarse a sus terminales a través de largas líneas alquiladas. Este método fue utilizado en el Proyecto RAND, permitiendo la colaboración entre <span class="person">Herbert Simon</span>, en Pittsburgh (Pensilvania) e investigadores de Santa Mónica (California) , en un trabajo sobre demostración automática de teoremas e inteligencia artificial.</p> 
+			<p>Poco después aparece la primera descripción documentada acerca de las interacciones sociales que podrían propiciarse como consecuencia de esta forma de trabajo en red (networking). En una serie de memorándums escritos por <span class="person">J.C.R. Licklider</span>, del Massachusetts Institute of Technology, entre 1960 y 1962, el autor expone su concepto de <strong>Galactic Network</strong>, refiriéndose a una red interconectada globalmente a través de la que cada uno pudiera acceder desde cualquier lugar a datos y programas, un concepto que, en esencia, era muy parecido a la Internet actual.</p>
+			<p>En <time>Octubre de 1962</time>, Licklider fue nombrado jefe de la <strong>Oficina de Técnicas de Procesamiento de Información</strong> (<abbr title="Information Processing Techniques Office">IPTO</abbr>) de la Agencia de Investigación de Proyectos Avanzados de Defensa (<abbr title="Defense Advanced Research Projects Agency"><strong>DARPA</strong></abbr>), una agencia del Departamento de Defensa de Estados Unidos responsable del desarrollo de nuevas tecnologías para uso militar. Licklider impulso un <strong>grupo informal sobre investigación en ordenadores</strong>, convenciendo a sus sucesores Ivan Sutherland, Bob Taylor, y el investigador del <abbr title="Massachusetts Institute of Technology">MIT</abbr> Lawrence G. Roberts de la importancia del concepto de trabajo en red.</p>
+			<p>Como parte de las actividades de procesado de información en DARPA, se instalaron <strong> tres terminales de redes</strong>:</p>
+			<ul>
+				<li>para la System Development Corporation en Santa Mónica</li>
+				<li>para el Proyecto Genie en la Universidad de California (Berkeley)</li>
+				<li>para el proyecto Multics en el Instituto Tecnológico de Massachusetts</li>
+			</ul>	
+			 <p>Esto puso de manifiesto las dificultades de interconexion derivadas de intentar conectar diferentes redes físicas para formar una sola red lógica.</p>			
+		</article>
+		<article>	
+			<header>
+				<h2>Conmutación de paquetes</h2>	
+			</header>
+			<p>En <time>Julio de 1961</time> <span class="person">Leonard Kleinrock</span> publicó desde el MIT el primer documento sobre la <strong>teoría de conmutación de paquetes</strong>. Un paquete es un conjunto de información que consta de dos partes: los datos propiamente dichos y la información de control, en la que está especificado la ruta a seguir a lo largo de la red hasta el destino del paquete. Mil octetos es el límite de longitud superior de los paquetes, y si la longitud del mensaje es mayor, este se fragmenta en otros paquetes.</p> 
+			<p>Kleinrock convenció a <span class="person">Lawrence G. Roberts</span> de la factibilidad teórica de las comunicaciones vía paquetes en lugar de circuitos, lo cual resultó ser un gran avance en el camino hacia el trabajo informático en red.</p>
+		</article>		
+	</section>
+	<aside>
+		<header>
+			<h2><span class="oculto">DARPA</span>
+			<img src="images/800px-DARPA_Logo.jpg"/>
+			</h2>
+			<p>
+				La <a href="http://www.darpa.mil/">Agencia de Proyectos de Investigación Avanzados de Defensa</a> es una agencia del Departamento de Defensa de Estados Unidos responsable del desarrollo de nuevas tecnologías para uso militar. Fue creada en 1958 como consecuencia tecnológica de la llamada Guerra Fría, cuando los exitos tecnológicos sovieticos y especialmente el lanzamiento del Spuknic, pusieron en entredicho la superioridad de los USA en este campo. El impulso financiero que dio DARPA a las investigaciones en el campo de las redes de ordenadores y la creación de una red con fines militares conocida como <abbr title="Advanced Research Projects Agency Network">ARPANET</abbr> ha hecho que muchos medios de comunicación difunda la equivoca percepción de los orígenes militares de Internet.
+			</p>
+ 
+
+		</header>
+		
+	</aside>	
+</body>
+</html>
