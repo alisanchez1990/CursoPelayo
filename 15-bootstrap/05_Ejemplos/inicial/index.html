@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<!--<?php include 'inc/head_common.php'; ?>-->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/default.css">
+
+	<link rel="stylesheet" href="css/cursos.css">
+	<title>Workshops con Bootstrap 3</title>
+</head>
+<body>
+	<!--<?php include 'inc/header.php'; ?>-->
+
+	<header id="_main-header">
+<!--Contenedor semántico: agrupa los elementos de la cabecera sin aplicar nada de Bootstrap-->
+	<div class="container">
+	<!--Contenedor correspondiente de Bootstrap-->
+		<div class="row">
+		<!--Única fila en el contenedor-->
+			<div class="col-xs-5">
+				<h1 id="_main-logo">Cle Formación<a href="index.php"><small>Cursos</small></a></h1>
+			</div> <!--Fin de la primera columna-->
+			<div class="col-xs-7">
+				<nav>
+					<ul id="_main-menu" class="nav nav-pills">
+						<li class="active"><a href="index.php">INICIO</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cursos<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="detail.php">RWD</a></li>
+								<li><a href="detail.php">Angular</a></li>
+							</ul>
+						</li>
+						<li><a href="#">INSTALACIONES</a></li>
+						<li><a href="#">FAQ</a></li>
+		  				<li><a href="#">CONTACTO</a></li>
+					</ul>					
+				</nav>
+			</div> <!--Fin de la Segunda columna-->
+		</div> <!--Fin de la fila (row)-->
+	</div> <!--Fin del contenedor-->
+</header>
+
+	
+	<div id="curso-list">
+	<!--div contenedor genéroico, no bootstrap, para agupar los artículos ¿section?-->
+
+		<article id="curso1" class="curso curso-left">
+		<!--El artículo utiliza el ancho completo, porque esta fuera de Bootstrap:
+		Lo único que contendrá es la imagen / el color de fondo.-->
+			<div class="container">
+			<!--Dentro del artículo se incluye un container para recuperar el ancho adecuado
+			 y poder dividirlo en filas y columnas-->
+				<div class="row">					
+					<div class="col-xs-8 date-info">
+						<h2>Desarrollo front-end responsive</h2>
+						<p>Repasa los conceptos de HTML5, CSS y su APIS de JavaScrip y aprende alguna de las herramientas más utilizadas, 
+						como Bootstrap 3 con <a href="#">Profesor 1</a>.</p>
+						<a href="detail.php" class="btn btn-custom">ME APUNTO!</a>
+						<a href="detail.php" class="more-info-link">quiero más información</a>
+					</div>
+					<div class="col-xs-3 col-xs-offset-1 main-info">
+						<ul>
+							<li class="highlighted"><strong>W21</strong> 23/26 de noviembre</li>
+							<li class="highlighted">20 plazas</li>
+							<li class="highlighted">99 €</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<article id="curso2" class="curso curso-right">
+		<!--El artículo utiliza el ancho completo, porque esta fuera de Bootstrap:
+		Lo único que contendrá es la imagen / el color de fondo.-->
+			<div class="container">
+			<!--Dentro del artículo se incluye un container para recuperar el ancho adecuado
+			 y poder dividirlo en filas y columnas-->
+				<div class="row">
+					<div class="col-xs-3 date-info">
+						<ul>
+							<li class="highlighted"><strong>W38</strong> 30 de noviembre / 2 de diciembre</li>
+							<li class="highlighted">15 plazas</li>
+							<li class="highlighted">120 €</li>							
+						</ul>
+					</div>
+					<div class="col-xs-8 col-xs-offset-1 main-info">
+						<h2>Desarrolla aplicaciones Web en JavaScript con Angular JS</h2>
+						<p>Comprueba hasta que puntoe conocido framework de JavaScript facilita la creración de apps de una sóla página para la Web, en este curso impartido por <a href="#">Profesor 2</a>.</p>
+						<a href="detail.php" class="_more-info-link">quiero más información</a>
+						<a href="detail.php" class="btn btn-custom">ME APUNTO!</a>	
+					</div>
+					
+				</div>
+			</div>
+		</article>
+	</div>
+
+	<!--<?php include 'inc/footer.php'; ?>-->
+	<footer>
+<!--Contenedor semántico: agrupa los elementos del footer sin aplicar nada de Bootstrap-->
+
+	<div class="container">
+	<!--Contenedor correspondiente de Bootstrap-->
+		<div class="row">
+		<!--Fila que contendrá 4 columnas distribuidas aparentemente en dos filas,
+		 separadas por un clearfix para asegurar este efecto-->
+			<div class="col-xs-5">
+				<h3>PRÓXIMOS CURSOS</h3>
+				<ul id="next-cursoss">
+					<li><a href="detail.php">Título del primer curso</a></li>
+					<li><a href="detail.php">Título del segundo segundo curso</a></li>
+				</ul>
+			</div><!--Fin de la columna 1-->
+			<div class="col-xs-6 col-xs-offset-1">
+				<h3>NO TE PIERDAS NUESTRAS NOVEDADES</h3>
+				<form id="subscribe-form" action="">
+					<div class="row">
+					<!--anidamiento dentro de la columna para disponer de nuevo del grid de 12 columnas
+					en el que introducimos el formulario-->
+						<div class="col-xs-8">
+							<div class="form-group">
+								<label class="sr-only" for="email">tu correo electrónico</label>
+								<!--Etiqueta unicamente para lectores de pantalla, que no soportan plaveholder-->
+								<input type="text" id="email" name="email" class="form-control input-lg" placeholder="tu correo electrónico">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<button class="btn btn-custom btn-lg">SUSCRIBIRME</button>
+						</div>
+					</div>
+				</form>
+			</div><!--Fin de la columna 2-->
+			<div class="clearfix"></div>
+			<!--Separación "como una fila" entre las 2 primeras y las 2 segundas columnas-->
+			<div class="col-xs-5">
+				<h3>SOBRE LOS CURSOS</h3>
+				<p>Estos cursos son el resultado de la colaboración de <a href="#">Empresa</a> y <a href="#">Empresa 2</a></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas porro aperiam dolores eius perferendis tempora eum impedit ea, consequuntur quaerat totam animi deserunt, tempore saepe. Tempora dolor numquam quibusdam eius.</p>
+			</div> <!--Fin de la columna 3-->
+			<div class="col-xs-6 col-xs-offset-1">
+				<h3>TE GUSTA? CORRE LA VOZ</h3>
+				<p>Si te gusta esta filosofía de formación, o has acudido a uno de nuestros cursos y te hemos convencido, ayúdanos a promocionarlos por Internet para que otros puedan disfrutar de ellos:</p>
+				<!-- Insertar addthis -->
+			</div> <!--Fin de la columna 4-->
+		</div> <!--Fin de la fila (row)-->
+	</div> <!--Fin del contenedor-->
+</footer>
+
+	<!--<?php include 'inc/footer_common.php'; ?>-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script>
+		function toggleMobileMenu() 
+		{
+			var $mobileMenu = $('#mobile-main-menu');	
+			$mobileMenu.slideToggle('fast');
+		}
+
+		$(document).ready(function() {
+			$('#mobile-menu-button').on('click', toggleMobileMenu);
+		});
+	</script>
+
+</body>
+</html>

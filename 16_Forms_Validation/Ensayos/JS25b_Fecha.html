@@ -1,0 +1,120 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Ejercicio 31 - Fecha</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Ejercicios del Curso CMF">
+        <meta name="author" content="Alejandro">
+        <meta name="keywords" content="javascript">
+        <link rel="shortcut icon" href="fav_icon.png">
+        <link href="default.css" rel="stylesheet" />
+		<script>
+
+            aDias = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"]
+
+            function controlSubmit(oEvent) {
+                oEvent.preventDefault();
+            }
+
+            function comprobacion_5_prueba(oEvent) {
+                var domInputFecha = oEvent.currentTarget.previousElementSibling
+                var domRespuesta = document.getElementById('parrafo_5');
+                var isPrevalidacion = domInputFecha.checkValidity()
+                //prevalidación del imput anterior al boton pulsado
+                if (isPrevalidacion) {
+                    // Si todas  las pre-validaciones estáticas son correctas, 
+                    // se deshabilita el método submit () 
+                    // y se realiza la presentación de los datos
+
+                    // reformateamos la fecha estilo "español"
+                    var aFecha = domInputFecha.value.split('-').reverse();
+                    var txtFullFecha = aFecha.join("/");
+                    // guardaríamos com date para posible usus posteriores
+                    var date = new Date(aFecha[2], aFecha[1] - 1, aFecha[0]); //año,mes,dia
+                    domRespuesta.innerHTML = 'la fecha ' + txtFullFecha + ' cae en ' + aDias[date.getDay()];
+                }
+            }
+            function comprobacion_5(oEvent) {
+                var domInputFecha = oEvent.currentTarget.previousElementSibling
+                var domRespuesta = document.getElementById('parrafo_5');
+                var isPrevalidacion = domInputFecha.checkValidity()
+                //prevalidación del imput anterior al boton pulsado
+                if (!isPrevalidacion) {
+                    // Si hay validaciones incorrectas se permite que el método submit () se ejecute
+                    // para lanzar la validación interactiva
+                    return true;
+                } 
+                // Si todas  las pre-validaciones estáticas son correctas, 
+                // se deshabilita el método submit () 
+                // y se realiza la presentación de los datos
+                oEvent.preventDefault();
+                // reformateamos la fecha estilo "español"
+                var aFecha = domInputFecha.value.split('-').reverse();
+                var txtFullFecha = aFecha.join("/");
+                // guardaríamos com date para posible usus posteriores
+                var date = new Date(aFecha[2], aFecha[1] - 1, aFecha[0]); //año,mes,dia
+                domRespuesta.innerHTML = 'la fecha ' + txtFullFecha + ' cae en ' + aDias[date.getDay()];
+                
+            }
+
+
+			function comprobacion(){
+				var respuesta=document.getElementById('parrafo');
+				var RegEx_texto = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
+				var txtFullFecha = document.getElementById('txtFecha').value;
+				if (txtFullFecha.search(RegEx_texto) < 0) {
+				    respuesta.innerHTML = 'el formato de la fecha no es valido';
+                    return false
+				};				
+				var aFecha = txtFullFecha.split('/')
+				var date = new Date(aFecha[2],aFecha[1]-1,aFecha[0]); //año,mes,dia
+				var date_mes = date.getMonth();
+
+				if(date_mes + 1 != aFecha[1]){
+					respuesta.innerHTML = 'la fecha no es valida';
+				}
+				else {
+				    txtFullFecha = aFecha[0] + "/" + aFecha[1] + "/" + date.getFullYear();
+				    respuesta.innerHTML = 'la fecha ' + txtFullFecha + ' cae en ' + aDias[date.getDay()];
+				}
+				return false;
+			}
+
+			window.onload = function(){	//envio de evento a la funcion manejadora.
+			    document.getElementById('boton_5').addEventListener("click", comprobacion_5_prueba);
+			    document.getElementById('formulario_5').addEventListener("submit", controlSubmit)
+			    document.getElementById('boton').onclick = comprobacion;
+                    
+			};//fin del onload
+
+		</script>
+	</head>
+	<body>
+		<h1>Formularios y fechas</h1>
+        <article>
+            <section>
+                <h2>Fechas en HTML5</h2>
+                <form enctype="text/plain" name="formulario_5" id="formulario_5">
+                    <input type="date" name="txtFecha_5" id="txtFecha_5" required />
+                    <button name="boton_5" id="boton_5" type="submit">Probar fecha</button>
+
+                </form>
+                <p id="parrafo_5"> </p>
+            </section>
+            <section>
+                <h2>Fechas en HTML tradicional</h2>
+                <p>Introducir la fecha en formato DD/MM/AA(AA)</p>
+                <form name="formulario" id="formulario">
+                    <input type="text" name="txtFecha" id="txtFecha" />
+                    <button name="boton" id="boton">Probar fecha</button>
+                </form>
+                <p id="parrafo"> </p>
+            </section>
+        </article>
+        <footer>
+            <p>&copy; Copyright  by  Alejandro L. Cerezo</p>
+            <p><a href="mailto:alcerezo@microforum.es">alcerezo@micorforum.es</a></p>
+        </footer>
+	</body>
+</html>
